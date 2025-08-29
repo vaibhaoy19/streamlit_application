@@ -156,5 +156,5 @@ Docker Official Docs
 AWS EC2 Guide
 
 ### 🌐 Streamlit Web Application Page
-![Streamlit App](screenshots/streamlit_app.png)
+![Streamlit App](https://github.com/vaibhaoy19/streamlit_application/blob/master/Screenshots/Streamlit%20Web%20Application%20Page.png)
 
