@@ -74,66 +74,48 @@ This project blends **DevOps**, **Docker**, and **Cloud Deployment** principles.
 ---
 
 ### 🔹 Step 2: Connect to EC2
-```bash
+
 ssh -i "your-key.pem" ubuntu@<your-ec2-public-ip>
 🔹 Step 3: Update OS
-bash
 sudo apt update && sudo apt upgrade -y
+
 🔹 Step 4: Create Project Directory & Clone Git Repo
-bash
-Copy code
 sudo apt install git -y
 mkdir my_streamlit_directory && cd my_streamlit_directory
 git clone https://github.com/vaibhaoy19/streamlit_application.git
 cd streamlit_application
+
 🔹 Step 5: Install Docker
-bash
-Copy code
 sudo apt install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
 Check Docker installation:
-
-bash
-Copy code
 docker --version
+
 🔹 Step 6: Build Docker Image
-bash
-Copy code
 docker build -t streamlit_application .
 docker images
+
 🔹 Step 7: Run Docker Container
-bash
-Copy code
 docker run --name streamlit-container -d -p 8501:8501 streamlit_application
 docker ps
+
 🔹 Step 8: Access Streamlit Application
 Open your browser:
-
-cpp
-Copy code
 http://<your-ec2-public-ip>:8501
 ✅ You will see the Streamlit Web App running.
 
 🔹 Step 9: Push Image to DockerHub
 Login to DockerHub:
-
-bash
-Copy code
 docker login
-Tag the image:
 
-bash
-Copy code
+Tag the image:
 docker tag streamlit_application vaibhaodocker19/streamlit_application:latest
 Push the image:
-
-bash
-Copy code
 docker push vaibhaodocker19/streamlit_application:latest
 Check live image on DockerHub.
 
-🎯 Project Summary
+ ### 🎯 Project Summary
 Framework: Streamlit
 
 Containerization: Docker
@@ -144,7 +126,7 @@ Image Storage: DockerHub
 
 Outcome: Portable, reproducible Streamlit app accessible via EC2 Public IP
 
-✅ Key Highlights
+### ✅ Key Highlights
 Developed an interactive Streamlit web app using Python
 
 Created a custom Dockerfile for packaging
@@ -157,7 +139,7 @@ Published Docker image on DockerHub
 
 Followed best DevOps practices: portability, reproducibility, scalability
 
-🏆 Conclusion
+### 🏆 Conclusion
 This project demonstrates a production-like deployment pipeline for a modern Python web application. By combining Docker, AWS EC2, GitHub, and DockerHub, the deployment is:
 
 Portable 🚀
@@ -166,16 +148,13 @@ Scalable ☁️
 
 DevOps-ready 🔧
 
-🔗 References
+### 🔗 References
 Streamlit Documentation
 
 Docker Official Docs
 
 AWS EC2 Guide
 
-📸 Screenshots
-👋 Welcome Page
+### 🌐 Streamlit Web Application Page
+![Streamlit App](screenshots/streamlit_app.png)
 
-📝 Signup Page
-
-🏠 Dashboard
